@@ -1,18 +1,9 @@
 #******************************************************************************
 # scrabble.py
 #******************************************************************************
-# Name: Eduardo Estevs
-#******************************************************************************
-# Overall notes (not to replace inline comments):
-#
-#
-#
-
-################################################################################
+# Eduardo E
 #
 # POINTS
-#
-################################################################################
 points = {'a':1,
           'b':3,
           'c':3,
@@ -44,18 +35,18 @@ points = {'a':1,
 all_words = open('words_eng.txt', 'r')
 
 
-#two empty lists for the scores adn respective words
+#two empty lists for the scores and respective words
 score_list = []
 
 word_list = []
 
-#loop goes trough the file line by line
+#loop goes through the file line by line
 for word in all_words:
     #'empty' variables to build the score and the respective word
     the_word = ''
     score = 0
     for letter in word:
-        #all character but the '\n'
+        #all characters but the '\n'
         if letter != '\n':
             score += points[letter]
             the_word += letter
@@ -67,7 +58,7 @@ all_words.close()
 
 #index variable will increase when the loop runs
 index_count = 0
-#stores the index of the highes score
+#stores the index of the highest score
 max_index = 0
 
 #loop compares the known max score with all values on the score list and saves the idx of the highest
@@ -78,6 +69,7 @@ for score in range(len(score_list)-1):
         
 #return the word with the highest score
 print(f'Most valuable word: {word_list[max_index]}')
+
 
 
 
